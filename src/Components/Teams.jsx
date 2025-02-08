@@ -28,7 +28,7 @@ const Teams = () => {
                         <h3 className="mb-1 text-2xl font-bold tracking-tight text-white dark:text-white mt-4">
                             <a href="#">Kal Kassa</a>
                         </h3>
-                        <p className="text-white">Bitcoin Education</p>
+                        <p className="text-white">Bitcoin Educator</p>
                     </div>
                     <div className="text-center text-gray-300 dark:text-gray-300">
                         <a href="https://www.linkedin.com/in/luca-infeld/" className="block overflow-hidden rounded-full mx-auto w-60 h-60 transform transition duration-300 hover:scale-110">
@@ -37,7 +37,7 @@ const Teams = () => {
                         <h3 className="mb-1 text-2xl font-bold tracking-tight text-white dark:text-white mt-4">
                             <a href="#">Luca Infeld</a>
                         </h3>
-                        <p className="text-white">Founder & CBDO | Mining for Family Offices</p>
+                        <p className="text-white">Founder & CBDO of Munich International Mining</p>
                     </div>
                 </div>  
             </div> 

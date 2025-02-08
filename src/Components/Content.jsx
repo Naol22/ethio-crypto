@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import night from '../assets/night.png';
+import night from '../assets/night_addis.jpg';
 
 const HeroSection = styled.div`
   height: 100vh;
@@ -21,7 +21,7 @@ const HeroSection = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(3, 2, 43, 0.85) 0%, rgba(3, 2, 43, 0.75) 100%);
+    background: linear-gradient(180deg, rgba(3, 2, 43, 0.50) 0%, rgba(3, 2, 43, 0.75) 100%);
     z-index: 1;
   }
 `;
@@ -129,6 +129,9 @@ const Content = () => {
           <Description>
             Join us in shaping Ethiopia's digital landscape through innovative blockchain solutions, sustainable mining practices, and cutting-edge technology infrastructure.
           </Description>
+          <div className='text-3xl font-bold text-white mb-10'>
+            March 5-6 | Hyatt Regency, Addis Ababa, Ethiopia
+          </div>
           <CTAButton
             href="https://docs.google.com/forms/d/e/1FAIpQLSeWIA8cvHHPG8VMdolI8jvVmwmzzN1XlbVAN3boTNqro0UzXA/viewform?usp=dialog"
             whileHover={{ scale: 1.05 }}
