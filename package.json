@@ -1,6 +1,6 @@
 {
   "name": "ethio-crypto",
-  "private": true,
+  "private": false,
   "homepage": "https://naol22.github.io/ethio-crypto/",
   "version": "0.0.0",
   "type": "module",
