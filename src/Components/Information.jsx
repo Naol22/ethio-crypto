@@ -1,167 +1,171 @@
-import { motion } from 'framer-motion';
+import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
   min-height: 100vh;
-  background: rgba(3, 2, 43, 0.02);
-  color: #333;
-  overflow-x: hidden;
+  background-color: #fafafa;
+  color: #1a1a1a;
+  padding: 6rem 2rem;
 `;
 
-const Section = styled.section`
-  min-height: 80vh;
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
+
+const Card = styled.div`
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  position: relative;
-  scroll-snap-align: start;
-  background: rgba(3, 2, 43, 0.02);
+  transition: all 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+  }
 `;
 
-const ContentWrapper = styled(motion.div)`
-  max-width: 800px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 1rem;
-`;
-
-const Title = styled(motion.h2)`
-  font-size: 2.5rem;
+const Title = styled.h2`
+  font-size: 1.125rem;
   color: #03022B;
-  margin-bottom: 2rem;
-  text-align: center;
-  font-weight: bold;
-`;
-
-const Description = styled(motion.p)`
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #1a1940;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
 `;
 
-const Value = styled(motion.div)`
-  font-size: 4rem;
+const StatsContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+`;
+
+const Stat = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #03022B;
+  padding-left: 1.5rem;
+`;
+
+const StatLabel = styled.span`
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666;
+  margin-bottom: 0.25rem;
+`;
+
+const Value = styled.div`
+  font-size: 2.5rem;
   color: #03022B;
-  font-weight: bold;
-  margin: 1rem 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+`;
+
+const Description = styled.p`
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #666;
+  margin-top: 1.5rem;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1.5rem;
+`;
+
+const SectionTitle = styled.h1`
+  font-size: 2.5rem;
+  color: #03022B;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
 `;
 
 const Information = () => {
   const infoData = [
     {
-      title: "Vital Information",
-      subtitle: "Africa's Bitcoin Mining Landscape",
+      title: "Africa's Bitcoin Mining Landscape",
       value: "3%",
-      description: "Global Hashrate Contribution: As of December 2024, Africa accounts for approximately 3% of the global Bitcoin mining hashrate, with operations primarily powered by renewable energy sources."
+      label: "Global Hashrate",
+      description: "Africa accounts for approximately 3% of the global Bitcoin mining hashrate, with operations primarily powered by renewable energy sources."
     },
     {
       title: "Ethiopia's Bitcoin Mining Statistics",
       value: "2.5%",
-      description: "Hashrate Contribution: Ethiopia contributes about 2.5% to the global Bitcoin mining hashrate, making it a significant player in the industry."
+      label: "Hashrate Contribution",
+      description: "Ethiopia contributes about 2.5% to the global Bitcoin mining hashrate, making it a significant player in the industry."
     },
     {
       title: "Energy Infrastructure",
-      value: "600 MW & 1GW",
-      description: "Energy Allocation: Ethiopian Electric Power (EEP) has allocated 600 megawatts (MW) of electricity to Bitcoin mining operations, with plans to increase this to 1 gigawatt (GW)."
+      value: "600 MW",
+      label: "Current Allocation",
+      secondValue: "1 GW",
+      secondLabel: "Future Target",
+      description: "Ethiopian Electric Power (EEP) has allocated 600 megawatts (MW) of electricity to Bitcoin mining operations, with plans to increase this to 1 gigawatt (GW)."
     },
     {
       title: "Revenue Generation",
-      value: "$55,000,000",
+      value: "$55M",
+      label: "10-Month Revenue",
       description: "In the past ten months, Ethiopia has generated over $55 million from Bitcoin mining activities."
     },
     {
       title: "Energy Pricing",
-      value: "3.2 cents / kWh",
+      value: "3.2¢",
+      label: "per kWh",
       description: "The country offers highly competitive electricity rates, averaging around 3.2 cents per kilowatt-hour, attracting numerous mining companies."
     },
     {
       title: "Mining Operations",
       value: "20",
+      label: "Registered Companies",
+      secondValue: "11",
+      secondLabel: "Active Operations",
       description: "There are currently 20 registered Bitcoin mining companies in Ethiopia, with 11 actively operational."
     }
   ];
 
   return (
     <Container>
-      {infoData.map((info, index) => (
-        <Section key={index}>
-          <ContentWrapper
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ 
-              opacity: 1, 
-              y: 0,
-              transition: {
-                duration: 0.8,
-                ease: "easeOut"
-              }
-            }}
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <Title
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ 
-                opacity: 1, 
-                x: 0,
-                transition: {
-                  duration: 0.6,
-                  delay: 0.2
-                }
-              }}
-              viewport={{ once: false, amount: 0.3 }}
-            >
-              {info.title}
-            </Title>
-            {info.subtitle && (
-              <Title
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ 
-                  opacity: 1, 
-                  x: 0,
-                  transition: {
-                    duration: 0.6,
-                    delay: 0.3
-                  }
-                }}
-                viewport={{ once: false, amount: 0.3 }}
-              >
-                {info.subtitle}
-              </Title>
-            )}
-            <Value
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ 
-                opacity: 1, 
-                scale: 1,
-                transition: {
-                  duration: 0.6,
-                  delay: 0.4
-                }
-              }}
-              viewport={{ once: false, amount: 0.3 }}
-            >
-              {info.value}
-            </Value>
-            <Description
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ 
-                opacity: 1, 
-                y: 0,
-                transition: {
-                  duration: 0.6,
-                  delay: 0.5
-                }
-              }}
-              viewport={{ once: false, amount: 0.3 }}
-            >
-              {info.description}
-            </Description>
-          </ContentWrapper>
-        </Section>
-      ))}
+      <SectionTitle>Bitcoin Mining in Ethiopia</SectionTitle>
+      <Grid>
+        {infoData.map((info, index) => (
+          <Card key={index}>
+            <Title>{info.title}</Title>
+            <StatsContainer>
+              <Stat>
+                <StatLabel>{info.label}</StatLabel>
+                <Value>{info.value}</Value>
+              </Stat>
+              {info.secondValue && (
+                <Stat>
+                  <StatLabel>{info.secondLabel}</StatLabel>
+                  <Value>{info.secondValue}</Value>
+                </Stat>
+              )}
+            </StatsContainer>
+            <Description>{info.description}</Description>
+          </Card>
+        ))}
+      </Grid>
     </Container>
   );
-};
+}
 
 export default Information;

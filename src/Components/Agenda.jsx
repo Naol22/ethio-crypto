@@ -3,52 +3,50 @@ import React from 'react';
 const Agenda = () => {
     const agendaItems = [
         {
-            date: "March 15, 2025",
+            date: "March 5th, 2025",
             events: [
                 {
-                    time: "8:30 AM - 10:00 AM",
-                    title: "Registration and Welcome Breakfast",
+                    time: "6:00 PM - 6:30 PM",
+                    title: "Welcome / Registration",
                     location: "Main Hall",
-                    description: "Start your day with networking over coffee and breakfast"
+                    description: "Check-in and networking"
                 },
                 {
-                    time: "10:00 AM - 11:30 AM",
-                    title: "Opening Keynote: The Future of Blockchain in Ethiopia",
-                    speaker: "Dr. Abebe Bekele",
-                    location: "Grand Ballroom",
-                    description: "Exploring the transformative potential of blockchain technology in Ethiopia"
+                    time: "6:30 PM - 6:45 PM",
+                    title: "Opening Remarks",
+                    speaker: "Robert Luft",
+                    location: "Main Hall",
+                    description: "Welcome address and event overview"
                 },
                 {
-                    time: "11:45 AM - 1:00 PM",
-                    title: "Panel Discussion: Digital Innovation",
-                    speaker: "Industry Leaders Panel",
-                    location: "Conference Room A",
-                    description: "Leading experts discuss the future of digital innovation"
+                    time: "6:45 PM - 7:00 PM",
+                    title: "Current State of Ethiopia Bitcoin Mining",
+                    speaker: "Kal Kassa",
+                    location: "Main Hall",
+                    description: "Overview of Bitcoin mining developments in Ethiopia"
+                },
+                {
+                    time: "7:00 PM - 8:00 PM",
+                    title: "Panel Discussions",
+                    location: "Main Hall",
+                    description: "Industry experts discuss the future of Bitcoin mining in Ethiopia"
+                },
+                {
+                    time: "8:00 PM - 9:00 PM",
+                    title: "Social Hour",
+                    location: "Main Hall",
+                    description: "Networking and refreshments"
                 }
             ]
         },
         {
-            date: "March 16, 2025",
+            date: "March 6th, 2025",
             events: [
                 {
-                    time: "9:00 AM - 10:30 AM",
-                    title: "Blockchain Workshop",
-                    speaker: "Tech Team",
-                    location: "Workshop Room",
-                    description: "Hands-on session on blockchain development"
-                },
-                {
-                    time: "10:45 AM - 12:00 PM",
-                    title: "Future of Digital Payments",
-                    speaker: "Sarah Johnson",
-                    location: "Main Hall",
-                    description: "Insights into the evolution of digital payment systems"
-                },
-                {
-                    time: "12:15 PM - 1:30 PM",
-                    title: "Closing Ceremony",
-                    location: "Grand Ballroom",
-                    description: "Concluding remarks and networking"
+                    time: "TBA",
+                    title: "Site Tour of Munich International Mining",
+                    location: "Bitcoin Mining Facility",
+                    description: "Exclusive tour of a state-of-the-art Bitcoin mining facility"
                 }
             ]
         }
