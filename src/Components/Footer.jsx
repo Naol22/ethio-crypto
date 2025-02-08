@@ -9,10 +9,10 @@ const Footer = () => {
                 </span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0">
                     <li>
-                        <a href="#" className="hover:underline me-4 md:me-6 hover:text-gray-300 transition-colors">Home</a>
+                        <a href="/" className="hover:underline me-4 md:me-6 hover:text-gray-300 transition-colors">Home</a>
                     </li>
                     <li>
-                        <a href="#" className="hover:underline me-4 md:me-6 hover:text-gray-300 transition-colors">Agenda</a>
+                        <a href="/agenda" className="hover:underline me-4 md:me-6 hover:text-gray-300 transition-colors">Agenda</a>
                     </li>
                     <li>
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWIA8cvHHPG8VMdolI8jvVmwmzzN1XlbVAN3boTNqro0UzXA/viewform?usp=dialog" 

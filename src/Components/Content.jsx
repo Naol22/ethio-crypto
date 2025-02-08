@@ -130,7 +130,7 @@ const Content = () => {
             Join us in shaping Ethiopia's digital landscape through innovative blockchain solutions, sustainable mining practices, and cutting-edge technology infrastructure.
           </Description>
           <CTAButton
-            href="#register"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeWIA8cvHHPG8VMdolI8jvVmwmzzN1XlbVAN3boTNqro0UzXA/viewform?usp=dialog"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
